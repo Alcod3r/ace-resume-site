@@ -4,13 +4,14 @@
 //}
 
 //module.exports = nextConfig
-const isGithubActions = process.env.GITHUB_ACTIONS || false
+//const isGithub = process.env.GITHUB_ACTIONS || false
+//const isProduction = process.env.NODE_ENV === 'production';
+const isGitHub = process.env.GITHUB_ACTIONS;
 
 let assetPrefix = ''
 let basePath = '/'
 
-if (isGithubActions) {
-  // trim off `<owner>/`
+if (isGitHub) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
 
   assetPrefix = `/${repo}/`
