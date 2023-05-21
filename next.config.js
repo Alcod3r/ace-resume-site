@@ -8,8 +8,8 @@
 //const isProduction = process.env.NODE_ENV === 'production';
 const isGitHub = process.env.GITHUB_ACTIONS;
 
-let assetPrefix = ''
-let basePath = '/'
+let assetPrefix = '';
+let basePath = '';
 
 if (isGitHub) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
